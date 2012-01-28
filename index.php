@@ -46,7 +46,7 @@ if ($token) {
   // This fetches some things that you like . 'limit=*" only returns * values.
   // To see the format of the data you are retrieving, use the "Graph API
   // Explorer" which is at https://developers.facebook.com/tools/explorer/
-  $birthdays =  = array_values(
+  $birthdays = array_values(
     idx(FBUtils::fetchFromFBGraph("me?access_token=$token&fields=birthday"), 'data', null, false)
   );
   
