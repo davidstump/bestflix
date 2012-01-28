@@ -84,6 +84,7 @@ if ($token) {
 }
 
 $birthyear = 2011;
+print_r($birthday);
 if (isset($birthday['birthday'])) {
 	$mybirthday = $birthday['birthday'];
 	$birthyear = substr($mybirthday, -4);
