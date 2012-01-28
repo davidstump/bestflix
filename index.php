@@ -84,7 +84,6 @@ if ($token) {
 }
 
 $birthyear = 2011;
-print_r($birthday);
 if (isset($birthday['birthday'])) {
 	$mybirthday = $birthday['birthday'];
 	$birthyear = substr($mybirthday, -4);
@@ -173,7 +172,11 @@ if (isset($birthday['birthday'])) {
 		<?php
 			for ($i = 2011; $i > 1926; $i--) {
 				$selected = "";
-				if (isset($_GET['year']) && $_GET['year'] == $i) {
+				if ($birthyear != 2011) {
+					if ($birthyear == $i) {
+						$selected = "selected=selected";
+					}
+				} else (isset($_GET['year']) && $_GET['year'] == $i) {
 					$selected = "selected=selected";
 				}
 				echo "<option value='" . $i . "' " . $selected . ">" . $i . "</option>";
