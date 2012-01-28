@@ -179,11 +179,11 @@ if (isset($birthday['birthday'])) {
 			for ($i = 2011; $i > 1926; $i--) {
 				$selected = "";
 				if (isset($_POST['year']) && $_POST['year'] == $i) {
+						$selected = "selected=selected";
+				} else if ($birthyear != 2011) {
 					if ($birthyear == $i) {
 						$selected = "selected=selected";
 					}
-				} else if ($birthyear != 2011) {
-					$selected = "selected=selected";
 				}
 				echo "<option value='" . $i . "' " . $selected . ">" . $i . "</option>";
 			}
