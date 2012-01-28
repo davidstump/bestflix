@@ -173,7 +173,7 @@ if (isset($birthday['birthday'])) {
 		<div class="clear"></div>
 		
 					<h2 class="grid_12 caption clearfix">Best Picture Nominees From:
-		<form name="pickyear" action="/" method="POST" style="display: inline">
+		<form name="pickyear" action="" method="POST" style="display: inline">
 		<select name="year" onChange="document.forms['pickyear'].submit()">
 		<?php
 			for ($i = 2011; $i > 1926; $i--) {
