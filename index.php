@@ -76,7 +76,7 @@ if ($token) {
   // These two URL's are links to dialogs that you will be able to use to share
   // your app with others.  Look under the documentation for dialogs at
   // developers.facebook.com for more information
-  $send_url = "https://www.facebook.com/dialog/send?redirect_uri=$redirect_url&display=popup&app_id=$app_id&link=$encoded_home";
+  $send_url = "https://www.facebook.com/dialog/send?redirect_uri=$redirect_url&display=popup&app_id=$app_id&link=http://bestflix.net";
   $post_to_wall_url = "https://www.facebook.com/dialog/feed?redirect_uri=$redirect_url&display=popup&app_id=$app_id";
 } else {
   // Stop running if we did not get a valid response from logging in
@@ -84,7 +84,10 @@ if ($token) {
 }
 
 $birthyear = 2011;
-
+if (isset($birthday['birthday'])) {
+	$mybirthday = $birthday['birthday'];
+	$birthyear = substr($mybirthday, -4);
+}
 ?>
 
 
