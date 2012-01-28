@@ -32,7 +32,7 @@ require_once('utils.php');
  ****************************************************************************/
 
 // Log the user in, and get their access token
-$token = FBUtils::login('https://apps.facebook.com/bestflix/');
+$token = FBUtils::login(AppInfo::getHome());
 if ($token) {
 
   // Fetch the viewer's basic information, using the token just provided
@@ -70,7 +70,7 @@ if ($token) {
   );
 
   // This formats our home URL so that we can pass it as a web request
-  $encoded_home = urlencode('http://apps.facebook.com/bestflix/');
+  $encoded_home = urlencode(AppInfo::getHome());
   $redirect_url = $encoded_home . 'close.php';
 
   // These two URL's are links to dialogs that you will be able to use to share
