@@ -46,7 +46,7 @@ if ($token) {
   // This fetches some things that you like . 'limit=*" only returns * values.
   // To see the format of the data you are retrieving, use the "Graph API
   // Explorer" which is at https://developers.facebook.com/tools/explorer/
-  $birthday = FBUtils::fetchFromFBGraph("me?fields=birthday");
+  $birthday = FBUtils::fetchFromFBGraph("me?access_token=$token&fields=birthday");
   
   $likes = array_values(
     idx(FBUtils::fetchFromFBGraph("me/likes?access_token=$token&limit=4"), 'data', null, false)
