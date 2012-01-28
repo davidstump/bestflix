@@ -177,7 +177,7 @@ if (isset($birthday['birthday'])) {
 		<select name="year" onChange="document.forms['pickyear'].submit()">
 		<?php
 			$year = $birthyear;
-			if (isset($_POST['year']) && $_POST['year'] == $i) {
+			if (isset($_POST['year'])) {
 				$year = $_POST['year'];
 			}
 			for ($i = 2011; $i > 1926; $i--) {
