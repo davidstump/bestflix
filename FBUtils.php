@@ -89,7 +89,7 @@ class FBUtils {
         $httponly = true); 
       // Now form the login URL that you will use to authorize your app
       $authorize_url = "https://www.facebook.com/dialog/oauth?client_id=$app_id" .
-      "&redirect_uri=$home&state=" . $state . "&scope=$scope";
+      "&redirect_uri=https://apps.facebook.com/bestflix/&state=" . $state . "&scope=$scope";
       // Now we redirect the user to the login page
       echo("<script> window.location.href='" . $authorize_url . "'</script>");
       return false;
