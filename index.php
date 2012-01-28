@@ -32,7 +32,7 @@ require_once('utils.php');
  ****************************************************************************/
 
 // Log the user in, and get their access token
-$token = FBUtils::login(AppInfo::getHome());
+$token = FBUtils::login('https://apps.facebook.com/bestflix/');
 if ($token) {
 
   // Fetch the viewer's basic information, using the token just provided
