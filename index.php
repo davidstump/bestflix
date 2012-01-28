@@ -180,7 +180,7 @@ if (isset($birthday['birthday'])) {
 				$selected = "";
 				if (isset($_POST['year']) && $_POST['year'] == $i) {
 						$selected = "selected=selected";
-				} else if ($birthyear != 2011) {
+				} elseif ($birthyear != 2011) {
 					if ($birthyear == $i) {
 						$selected = "selected=selected";
 					}
