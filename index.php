@@ -173,7 +173,7 @@ if (isset($birthday['birthday'])) {
 		<div class="clear"></div>
 		
 					<h2 class="grid_12 caption clearfix">Best Picture Nominees From:
-		<form name="pickyear" action="/" method="GET" style="display: inline">
+		<form name="pickyear" action="/" method="POST" style="display: inline">
 		<select name="year" onChange="document.forms['pickyear'].submit()">
 		<?php
 			for ($i = 2011; $i > 1926; $i--) {
@@ -182,7 +182,7 @@ if (isset($birthday['birthday'])) {
 					if ($birthyear == $i) {
 						$selected = "selected=selected";
 					}
-				} else if (isset($_GET['year']) && $_GET['year'] == $i) {
+				} else if (isset($_POST['year']) && $_POST['year'] == $i) {
 					$selected = "selected=selected";
 				}
 				echo "<option value='" . $i . "' " . $selected . ">" . $i . "</option>";
@@ -225,8 +225,8 @@ if (isset($birthday['birthday'])) {
 				
 				foreach ($films as $film => $year) {
 					$filteryear = $birthyear;
-					if (isset($_GET['year'])) {
-						$filteryear = $_GET['year'];
+					if (isset($_POST['year'])) {
+						$filteryear = $_POST['year'];
 					}
 			
 					if ($filteryear == $year) {
