@@ -101,6 +101,14 @@ if (isset($birthday['birthday'])) {
 	<meta name="keywords" content="academy awards, oscars, best picture, netflix, award, movies, films" >
 	<meta name="description" content="Find the Best Picture Nominees from any year since the inception of the Academy Awards and add them to your Netflix Queue. Never miss a great movie again!" >
 	
+	<meta property="fb:app_id" content="294024543986953" />
+	<meta property="og:url" content="http://apps.facebook.com/bestflix/" />
+	<meta property="og:site_name" content="BestFlix" />
+	<meta property="og:site_url" content="https://apps.facebook.com/bestflix/" />
+	<meta property="og:type" content="website" />
+	<meta property="og:image" content="https://fbcdn-photos-a.akamaihd.net/photos-ak-snc1/v85006/73/294024543986953/app_1_294024543986953_3971.gif" />
+	<meta property="og:title" content="BestFlix" />
+	
 	<!-- Stylesheets -->
 	<link rel="stylesheet" href="css/reset.css" />
 	<link rel="stylesheet" href="css/styles.css" />
