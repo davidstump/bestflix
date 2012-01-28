@@ -176,14 +176,14 @@ if (isset($birthday['birthday'])) {
 		<form name="pickyear" action="" method="POST" style="display: inline">
 		<select name="year" onChange="document.forms['pickyear'].submit()">
 		<?php
+			$year = $birthyear;
+			if (isset($_POST['year']) && $_POST['year'] == $i) {
+				$year = $_POST['year'];
+			}
 			for ($i = 2011; $i > 1926; $i--) {
 				$selected = "";
-				if (isset($_POST['year']) && $_POST['year'] == $i) {
-						$selected = "selected=selected";
-				} elseif ($birthyear != 2011) {
-					if ($birthyear == $i) {
-						$selected = "selected=selected";
-					}
+				if ($year == $i) {
+					$selected = "selected=selected";
 				}
 				echo "<option value='" . $i . "' " . $selected . ">" . $i . "</option>";
 			}
