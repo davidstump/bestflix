@@ -176,7 +176,7 @@ if (isset($birthday['birthday'])) {
 					if ($birthyear == $i) {
 						$selected = "selected=selected";
 					}
-				} else (isset($_GET['year']) && $_GET['year'] == $i) {
+				} else if (isset($_GET['year']) && $_GET['year'] == $i) {
 					$selected = "selected=selected";
 				}
 				echo "<option value='" . $i . "' " . $selected . ">" . $i . "</option>";
