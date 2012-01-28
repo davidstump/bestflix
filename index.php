@@ -80,7 +80,7 @@
 			      languages.
 			    */
 				
-			    include ('../library/oauth/OAuthSimple.php');
+			    include ('library/oauth/OAuthSimple.php');
 			        
 			    /* Remember, these are bogus. Swap them for the API key and Shared Secret
 			      you got when you registered your Application at
