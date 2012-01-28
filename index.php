@@ -1,3 +1,9 @@
+<script>
+	var isInIFrame = (window.location != window.parent.location) ? true : false;
+	if (!isInIFrame) {
+		window.location.href = 'https://apps.facebook.com/bestflix/';
+	}
+</script>
 <?php
 
 // Enforce https on production
